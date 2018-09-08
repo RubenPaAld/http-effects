@@ -1,0 +1,36 @@
+<nav class="navbar is-transparent">
+  <div class="navbar-brand" style="margin-left: 10%">
+    <a class="navbar-item" routerLink="/home">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample" (click)="open()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu" [ngClass]="{'is-active': collarpse}">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLinkActive="has-text-weight-bold" routerLink="/home">
+        Home
+      </a>
+      <a class="navbar-item" routerLinkActive="has-text-weight-bold" routerLink="/usuario/1">
+        Usuarios
+      </a>
+    </div>
+
+    <div class="navbar-end" style="margin-right: 5%">
+      <div class="navbar-item">
+        <div class="field">
+          <div class="control has-icons-left">
+            <input #seachbar class="input is-rounded" type="text" (keyup.enter)="buscar(seachbar.value)">
+            <a class="icon is-small is-left pointer">
+             <fa-icon [icon]="faSearch"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
